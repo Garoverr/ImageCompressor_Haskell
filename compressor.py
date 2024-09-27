@@ -38,6 +38,7 @@ def parse_pixel_file(file_path):
 def pixels_to_image(pixels, width, height):
     """Convert pixel data to a PIL image."""
     img_data = np.zeros((height, width, 3), dtype=np.uint8)
+    
     for (x, y), color in pixels.items():
         img_data[y, x] = color
 
@@ -52,7 +53,7 @@ def image_to_pixels(image_path):
         pixel_data = []
         for y in range(height):
             for x in range(width):
-                pixel_data.append(f'({y},{x}) ({pixels[x, y][0]},{pixels[x, y][1]},{pixels[x, y][2]})')
+                pixel_data.append(f'({x},{y}) ({pixels[x, y][0]},{pixels[x, y][1]},{pixels[x, y][2]})')
 
     return '\n'.join(pixel_data)
 
@@ -68,29 +69,24 @@ def compress_image(image_path, nb_clusters, conv_limit, output_path=None):
     image_name = os.path.basename(image_path)
     dir_name = os.path.dirname(image_path) or "."
 
-    # Generate output path if not provided
     if output_path is None:
-        output_path = os.path.join(dir_name, f'compressed_{nb_clusters}-clusters_{conv_limit}-conv-limit_{image_name}')
+        output_path = os.path.join(dir_name, f'compressed_{image_name}')
 
     if not os.path.isfile("imageCompressor"):
         raise FileNotFoundError("Executable 'imageCompressor' not found. Please run 'make'.")
 
-    # Convert image to pixel data
     print('Converting image to pixels...')
     pixel_output_path = os.path.join("pixels", f"{image_name}.in")
     pixel_data = image_to_pixels(image_path)
 
-    # Save pixel data to file
     os.makedirs("pixels", exist_ok=True)
     with open(pixel_output_path, 'w') as pixel_file:
         pixel_file.write(pixel_data)
 
-    # Compress the pixel data using Haskell code
     print('Compressing pixels...')
     compressed_pixel_output = f"pixels/{image_name}.out"
     run_command(f'./imageCompressor -n {nb_clusters} -l {conv_limit} -f {pixel_output_path} > {compressed_pixel_output}')
 
-    # Convert compressed pixel data back to image
     print('Converting compressed pixels back to image...')
     pixels, width, height = parse_pixel_file(compressed_pixel_output)
     compressed_image = pixels_to_image(pixels, width, height)
