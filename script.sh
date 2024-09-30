@@ -3,6 +3,10 @@
 # stop the scrypt if an error occurs
 set -e
 
+stack build
+
+make
+
 echo "Installing react dependencies..."
 npm install
 
