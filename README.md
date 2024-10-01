@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-# ImageCompressor_Haskell
-=======
-# ImageCompressor
 
->>>>>>> ff1bc09 ([Add]: the web part completed but not with the final UI/UX)
-
-![My Skills](https://skillicons.dev/icons?i=haskell)
 ![My Skills](https://skillicons.dev/icons?i=python)
 ![My Skills](https://skillicons.dev/icons?i=javascript)
 <br/>
@@ -21,7 +14,6 @@ __App.js__ in __JavaScript__ for the graphical interface.
 
 ## Usage:
 
-<<<<<<< HEAD
 After cloning the repository, you can use the haskell imageCompressor by different ways:
 - One with a graphical interface, made with `react.js`.
 - One is in terminal with a python script to give a `.png` or `.jpg` file and output a new compressed image.
@@ -34,6 +26,8 @@ __It's the same haskell program for all of them.__
 </br>
 
 If it's not already made:  `chmod +x script.sh`
+
+It will build the stack project and use the Makefile. It will also check the npm installation.
 
 The script will start a server on port 5000 and start the react web site on port 3000: `./script.sh`
 
@@ -49,19 +43,11 @@ There you can browse a `.png` or `.jpg` file and play with the cursors. The numb
 
 </details>
 
+
+<details>
+<summary>Haskell only</summary>
+</br>
+
+</details>
+
 ## Exemple:
-=======
-After cloning the repository,
-
-` chmod +x script.sh`
-
-` ./script.sh`
-
-or 
-
-` stack build `
-
-` make `
-
-`  `
->>>>>>> ff1bc09 ([Add]: the web part completed but not with the final UI/UX)
