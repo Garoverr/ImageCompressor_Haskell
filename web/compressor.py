@@ -95,6 +95,11 @@ def compress_image(image_path, nb_clusters, conv_limit, output_path=None):
     print(f'Output file: {output_path}')
 
 if __name__ == '__main__':
+    
+    if "-h" in argv or "--help" in argv:
+        print('Usage: ./compress.py image.[jpg/png/bmp] nbClusters convLimit [output_path]')
+        exit(0)
+    
     if len(argv) not in (4, 5):
         print('Usage: ./compress.py image.[jpg/png/bmp] nbClusters convLimit [output_path]')
         exit(1)
