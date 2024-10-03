@@ -97,5 +97,14 @@ If you don't want to modify your input file:
 </details>
 
 ## Exemple:
-
-
+ | Original Image | parameters | Compressed Image |
+ | --- | --- | --- | 
+ | ![exemple_1](exemples/exemple_1.jpg) | -n 12 -l 0.45  | ![compressed_exemple_1](exemples/compressed_exemple_1_1.jpg) |
+ | ![exemple_2](exemples/exemple_1.jpg) | -n 7 -l 0.95  | ![compressed_exemple_2](exemples/compressed_exemple_1_2.jpg)  |
+ | ![exemple_3](exemples/exemple_2.jpg) | -n 8 -l 0.45  | ![compressed_exemple_3](exemples/compressed_exemple_2_1.jpg)  |
+ | ![exemple_4](exemples/exemple_2.jpg) | -n 2 -l 0.5  | ![compressed_exemple_4](exemples/compressed_exemple_2_2.jpg)  |
+ | ![exemple_5](exemples/exemple_3.png) | -n 2 -l 0.5  | ![compressed_exemple_5](exemples/compressed_exemple_3_1.jpg)  |
+ | ![exemple_6](exemples/exemple_3.png) | -n 7 -l 0.2  | ![compressed_exemple_6](exemples/compressed_exemple_3_2.jpg)  |
+ | ![exemple_7](exemples/exemple_4.jpg) | -n 5 -l 0.8   | ![compressed_exemple_7](exemples/compressed_exemple_4_1.jpg) |
+ | ![exemple_8](exemples/exemple_4.jpg) | -n 12 -l 0.4  | ![compressed_exemple_8](exemples/compressed_exemple_4_2.jpg) |
+ | ![exemple_9](exemples/exemple_4.jpg) | -n 3 -l 0.04  | ![compressed_exemple_9](exemples/compressed_exemple_4_3.jpg) |
