@@ -36,6 +36,8 @@ After the algorithm converges, each pixel in the image is replaced by the color 
 
 This process reduces the image's file size by limiting the amount of color information that needs to be stored.
 
+![clustering](exemples/clustering_pic.png)
+
 
 ## Usage:
 
@@ -108,4 +110,3 @@ If you don't want to modify your input file:
  | ![exemple_7](exemples/exemple_4.jpg) | -n 5 -l 0.8   | ![compressed_exemple_7](exemples/compressed_exemple_4_1.jpg) |
  | ![exemple_8](exemples/exemple_4.jpg) | -n 12 -l 0.4  | ![compressed_exemple_8](exemples/compressed_exemple_4_2.jpg) |
  | ![exemple_9](exemples/exemple_4.jpg) | -n 3 -l 0.04  | ![compressed_exemple_9](exemples/compressed_exemple_4_3.jpg) |
- 
